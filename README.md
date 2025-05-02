@@ -16,9 +16,13 @@ The goal is to build a robust visual classification system that helps recognize 
 🖼️ Demo Screenshots
 🔹 Home Page
 
-<p align="center"> <img src="https://drive.google.com/file/d/1dXUPq0OiRTV-h09iJhoJWNhBYuqw6VjY/view?usp=sharing" width="800" alt="Home Page Screenshot"> </p>
+<p align="center"> 
+  <img src="https://drive.google.com/uc?export=view&id=1dXUPq0OiRTV-h09iJhoJWNhBYuqw6VjY" width="800" alt="Home Page Screenshot">
+</p>
 🔹 Classification Result
-<p align="center"> <img src="https://drive.google.com/file/d/1fgDNk36_GoGV3AdLgkA0_0z7ZEo7gtcz/view?usp=sharing" width="800" alt="Classification Results Screenshot"> </p>
+<p align="center">\
+  <img src="https://drive.google.com/uc?export=view&id=1fgDNk36_GoGV3AdLgkA0_0z7ZEo7gtcz" width="800" alt="Classification Results Screenshot">
+</p>
 🛠️ Technologies Used
 Python 3.10.6
 

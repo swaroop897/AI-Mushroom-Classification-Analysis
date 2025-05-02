@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Mushroom Classification Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .content-box {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(15px);
+      border-radius: 30px;
+      padding: 50px;
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      animation: float 6s ease-in-out infinite;
+      transition: all 0.3s ease;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .text-content {
+      flex: 1;
+      min-width: 280px;
+      padding-right: 30px;
+    }
+
+    .text-content h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 48px;
+      color: #ff7eb3;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+    }
+
+    .text-content h3 {
+      font-size: 24px;
+      color: #9f5f80;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.2);
+    }
+
+    .text-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #dddddd;
+      margin-bottom: 30px;
+    }
+
+    .text-content strong {
+      color: #ffcfdf;
+    }
+
+    .mushroom-image {
+      flex: 1;
+      min-width: 280px;
+      max-width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+      transform: rotate(-5deg);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .mushroom-image:hover {
+      transform: rotate(5deg) scale(1.05);
+      box-shadow: 0 10px 30px rgba(255, 118, 158, 0.6);
+    }
+
+    .mushroom-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      filter: brightness(1.1) contrast(1.1);
+    }
+
+    #predict_btn {
+      background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(0, 198, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    #predict_btn:hover {
+      background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(252, 70, 107, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .content-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-content {
+        padding: 0;
+      }
+
+      .mushroom-image {
+        margin-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content-box">
+      <div class="text-content">
+        <h1>AI Mushroom Fun!</h1>
+        <h3>Discover the Magic of Mushrooms</h3>
+        <p>
+          Using powerful AI, we're classifying the enchanting world of mushrooms into three vibrant categories: 
+          <strong>Boletus</strong>, <strong>Lactarius</strong>, and <strong>Russula</strong>!<br><br>
+          Ready to explore and detect some mushrooms?
+        </p>
+        <a href="{{ url_for('predict_page') }}">
+          <button id="predict_btn">Let's Detect!</button>
+        </a>
+      </div>
+      <div class="mushroom-image">
+        <img src="https://images.unsplash.com/photo-1630921121767-81e86d066a5d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG11c2hyb29tfGVufDB8fDB8fHww" alt="Mushroom">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
